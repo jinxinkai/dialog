@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>验证码弹出框</title>
+		<link rel="stylesheet" type="text/css" href="dialog.css" />
+	</head>
+	<body>
+		<button onclick="openDialog()">验证码弹出框</button>
+		<script type="text/javascript" src="dialog.js"></script>
+		<script type="text/javascript">
+			var dialog = new Dialog();
+			function openDialog() {
+				dialog.alert(function(ret) {
+					alert(ret.valus)
+				})
+			}
+		</script>
+	</body>
+
+</html>
