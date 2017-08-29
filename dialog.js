@@ -8,7 +8,7 @@
 			var dialogHtml = '';
 			var buttonsHtml = '';
 			var headerHtml = '<div class="dialog-header">请输入验证码</div>'
-			var msgHtml = '<div class="dialog-body"><img class="dialog-img" src="http://music.163.com/captcha?id=esiIQVcebr6KfBrNqI1tNZ9f" /><input type="text" placeholder="请输入验证码"></div>';
+			var msgHtml = '<div class="dialog-body"><img class="dialog-img" src="http://music.163.com/captcha?id=esiIQVcebr6KfBrNqI1tNZ9f" /><input id="dialog-input" type="text" placeholder="请输入验证码"></div>';
 			var buttonsHtml ='<div class="dialog-btn" tapmode button-index="0">提交</div>';
 			var footerHtml = '<div class="dialog-footer">' + buttonsHtml + '</div>';
 			dialogHtml = '<div class="dialog">' + headerHtml + msgHtml + footerHtml + '</div>';
@@ -20,7 +20,7 @@
 			}
 			var dialogButton = document.querySelector(".dialog-btn");
 			dialogButton.onclick = function() {
-				(callback && typeof(callback) === "function") && callback({valus: document.querySelector("input").value});
+				(callback && typeof(callback) === "function") && callback({value: document.getElementById("dialog-input").value});
 				self.close();
 				return;
 			}
